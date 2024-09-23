@@ -5,6 +5,10 @@ public class Serie extends Titulo{
     private int episiodiosTemporada;
     private int minutosEpisodio;
 
+    public Serie(String nombre, int fechaLanzamiento) {
+        super(nombre, fechaLanzamiento);
+    }
+
 
     @Override
     public int getDuracion(){

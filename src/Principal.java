@@ -8,9 +8,7 @@ import com.aluracursos.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
-        miPelicula.setFechaLanzamiento(2021);
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.setDuracion(120);
         miPelicula.setIncluidoEnPlan(true);
         miPelicula.evalua(10);
@@ -23,18 +21,14 @@ public class Principal {
 
 
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del Dragón");
-        casaDragon.setFechaLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del Dragón", 2022);
         casaDragon.setTemporada(1);
         casaDragon.setMinutosEpisodio(50);
         casaDragon.setEpisiodiosTemporada(10);
         System.out.println(casaDragon.getDuracion());
-       casaDragon.muestraFichaTecnica();
+        casaDragon.muestraFichaTecnica();
+        Pelicula otraPelicula = new Pelicula("Matrix",1998);
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
-        otraPelicula.setFechaLanzamiento(1998);
         otraPelicula.setDuracion(180);
 
        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -55,10 +49,9 @@ public class Principal {
 
         filtroRecomendacion.filtra(episodio);
         
-        var peliculaDeBalam = new Pelicula ();
-        peliculaDeBalam.setNombre("El señor de los anillos");
+        var peliculaDeBalam = new Pelicula ("El señor de los anillos", 2001);
+
         peliculaDeBalam.setDuracion(180);
-        peliculaDeBalam.setFechaLanzamiento(2001);
         
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeBalam);
