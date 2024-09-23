@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -11,10 +13,9 @@ public class Principal {
         miPelicula.setFechaLanzamiento(2021);
         miPelicula.setDuracion(120);
         miPelicula.setIncluidoEnPlan(true);
+        miPelicula.evalua(10);
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(10);
-        miPelicula.evalua(10);
-        miPelicula.evalua(7);
 
         System.out.println("EL total de evaluaciones es: " + miPelicula.getTotalEvaluaciones());
         System.out.println("La puntuacion media es de: " + miPelicula.calculaMedia());
@@ -53,6 +54,21 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
 
         filtroRecomendacion.filtra(episodio);
+        
+        var peliculaDeBalam = new Pelicula ();
+        peliculaDeBalam.setNombre("El señor de los anillos");
+        peliculaDeBalam.setDuracion(180);
+        peliculaDeBalam.setFechaLanzamiento(2001);
+        
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeBalam);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+        System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
+        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas.toString());
+        
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
 
 
     }
