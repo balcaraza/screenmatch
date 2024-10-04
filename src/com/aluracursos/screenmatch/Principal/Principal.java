@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.Principal;
+
 import java.util.ArrayList;
 
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
@@ -54,9 +56,11 @@ public class Principal {
         peliculaDeBalam.setDuracion(180);
         
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+
         listaDePeliculas.add(peliculaDeBalam);
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(otraPelicula);
+
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas.toString());
